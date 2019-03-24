@@ -1,8 +1,10 @@
 /*
 /*/
 
-./Assets/PostProcessing
-
 !.gitignore
 !/Assets/
 !/ProjectSettings/
+
+/Assets/PostProcessing
+.blend1
+.meta
