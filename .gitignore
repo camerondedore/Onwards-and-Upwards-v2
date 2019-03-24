@@ -1,6 +1,8 @@
 /*
 /*/
 
+./Assets/PostProcessing
+
 !.gitignore
 !/Assets/
 !/ProjectSettings/
