@@ -50,7 +50,7 @@ ModelImporter:
     13700000: Char_Human_Base
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
