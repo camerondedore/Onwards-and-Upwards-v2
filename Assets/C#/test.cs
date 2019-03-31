@@ -8,6 +8,10 @@ public class test : MonoBehaviour
     float projectileSpeed = 150;
 
     [SerializeField]
+    GameObject projectile;
+    float lastFireTime = 0;
+
+    [SerializeField]
     GameObject target;
     Rigidbody targetRigid;
 
@@ -35,6 +39,15 @@ public class test : MonoBehaviour
         var aimDir = targetDir + targetRigid.velocity * (-c - Mathf.Sqrt(Mathf.Pow(c, 2) - 4 * (b - 1) * a)) / (2 * (b - 1));
 
         transform.forward = aimDir;
+
+        // shoot
+        if(Time.time - lastFireTime > 1)
+        {
+            lastFireTime = Time.time;
+            var bullet = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
+            var bulletRigid = bullet.GetComponent<Rigidbody>();
+            bulletRigid.velocity = transform.forward * projectileSpeed;
+        }
 
     }
 }
