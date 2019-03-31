@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: 114835041449069130}
-  - {fileID: 114830901356533212}
+  - {fileID: 114086036067994458}
   - {fileID: 114020788460590394}
 --- !u!114 &114020788460590394
 MonoBehaviour:
@@ -1327,7 +1327,7 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &114830901356533212
+--- !u!114 &114086036067994458
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1345,13 +1345,13 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 1, y: 99}
+    value: {x: 50, y: 95}
   minLuminance:
     overrideState: 1
-    value: -9
+    value: -1
   maxLuminance:
     overrideState: 1
-    value: 9
+    value: 1
   keyValue:
     overrideState: 1
     value: 1
