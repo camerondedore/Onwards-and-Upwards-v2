@@ -45,7 +45,7 @@ public class FpsInventory : MonoBehaviour
 	void SwitchTo(int slotNumber)
 	{
 		currentSlot = slotNumber;
-		var slotToSwitchTo = weaponSlots.Where(s => s.slot == slotNumber).First();
+		var slotToSwitchTo = GetSlot(slotNumber);
 		
 		if(!slotToSwitchTo.obtained)
 		{
@@ -65,5 +65,23 @@ public class FpsInventory : MonoBehaviour
 				weaponSlot.weapon.gameObject.SetActive(false);
 			}
 		}
+	}
+
+
+
+	public void Obtained(int slotNumber)
+	{
+		// obtain new weapon
+		var slotToSwitchTo = GetSlot(slotNumber);
+		slotToSwitchTo.obtained = true;
+		// auto switch to new weapon
+		SwitchTo(slotNumber);
+	}
+
+
+
+	public WeaponSlot GetSlot(int slotNumber)
+	{
+		return weaponSlots.Where(s => s.slot == slotNumber).First();
 	}
 }

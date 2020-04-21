@@ -24,12 +24,14 @@ public class PickupWeapon : MonoBehaviour, IPickup
 	public void Pickup(Transform player)
 	{
 		var inventory = player.GetComponentInChildren<FpsInventory>();
-		var weaponSlot = inventory.weaponSlots.Where(s => s.slot == slot).First();
+		var weaponSlot = inventory.GetSlot(slot);
 
 		if(weaponSlot.weapon.CanReload() || !weaponSlot.obtained)
 		{
 			AudioSource.PlayClipAtPoint(pickupSound, transform.position);
-			weaponSlot.obtained = true;
+			// obtain new weapon
+			inventory.Obtained(slot);
+			// give ammo
 			weaponSlot.weapon.Reload(ammo);
 			Destroy(gameObject);
 		}
