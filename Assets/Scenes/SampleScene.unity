@@ -265,35 +265,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.011957827
-      outSlope: 0.011957827
+      inSlope: 0.015215286
+      outSlope: 0.015215286
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.93004644
-      value: 0.0111213345
-      inSlope: 0.00044100685
-      outSlope: 0.00044100685
+      time: 0.9876636
+      value: 0.0150275845
+      inSlope: 0.00017528841
+      outSlope: 0.00017528841
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.9341564
-      value: 0
-      inSlope: -0.010041935
-      outSlope: -0.010041935
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 3.077864
-      value: -0.010302582
-      inSlope: 0.0010822308
-      outSlope: 0.0010822308
+      time: 2.995558
+      value: -0.014819183
+      inSlope: -0.000055530574
+      outSlope: -0.000055530574
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -301,8 +292,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 4
       value: 0
-      inSlope: 0.011172518
-      outSlope: 0.011172518
+      inSlope: 0.014753648
+      outSlope: 0.014753648
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -421,7 +412,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 237917844}
-  - {fileID: 1546330583}
+  - {fileID: 269356058}
   m_Father: {fileID: 787535727}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -507,7 +498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -564,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 3300000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1171882174941518066, guid: 165f472308af15e48a53c75ece85b823,
+      objectReference: {fileID: -6236791330529638256, guid: e56449a636184d9408be9437316a70fa,
         type: 3}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
@@ -829,6 +820,106 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257849057}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &269356057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 269356058}
+  - component: {fileID: 269356061}
+  - component: {fileID: 269356060}
+  - component: {fileID: 269356059}
+  m_Layer: 5
+  m_Name: Ammo Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &269356058
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269356057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1546330583}
+  m_Father: {fileID: 176536082}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 25}
+  m_SizeDelta: {x: 100, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &269356059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269356057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 10
+    m_Right: 10
+    m_Top: 10
+    m_Bottom: 10
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+--- !u!114 &269356060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269356057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &269356061
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269356057}
+  m_CullTransparentMesh: 0
 --- !u!1 &274828828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,7 +2753,6 @@ GameObject:
   - component: {fileID: 1546330583}
   - component: {fileID: 1546330586}
   - component: {fileID: 1546330585}
-  - component: {fileID: 1546330584}
   - component: {fileID: 1546330587}
   m_Layer: 5
   m_Name: Ammo Counter
@@ -2678,33 +2768,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546330582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 176536082}
-  m_RootOrder: 1
+  m_Father: {fileID: 269356058}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1546330584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546330582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
 --- !u!114 &1546330585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2725,13 +2800,13 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: dfe72572617279e4a8825b3295fa5ff7, type: 3}
-    m_FontSize: 14
+    m_FontSize: 0
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
+    m_MinSize: 0
+    m_MaxSize: 172
+    m_Alignment: 4
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -3114,7 +3189,7 @@ GameObject:
   - component: {fileID: 1699670587}
   - component: {fileID: 1699670586}
   m_Layer: 11
-  m_Name: Pistol Pickup (1)
+  m_Name: Rifle Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4022,9 +4097,11 @@ MonoBehaviour:
   - weapon: {fileID: 730820503}
     slot: 1
     obtained: 0
+    equipSound: {fileID: 0}
   - weapon: {fileID: 629589945}
     slot: 2
     obtained: 0
+    equipSound: {fileID: 0}
 --- !u!1 &2051024747
 GameObject:
   m_ObjectHideFlags: 0
@@ -4307,7 +4384,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4879473695175861229}
-  m_Mesh: {fileID: 1171882174941518066, guid: 165f472308af15e48a53c75ece85b823, type: 3}
+  m_Mesh: {fileID: -6236791330529638256, guid: e56449a636184d9408be9437316a70fa, type: 3}
 --- !u!23 &4879473695178063149
 MeshRenderer:
   m_ObjectHideFlags: 0

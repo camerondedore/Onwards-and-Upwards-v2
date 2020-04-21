@@ -12,6 +12,7 @@ public class FpsInventory : MonoBehaviour
 		public Weapon weapon;
 		public int slot;
 		public bool obtained;
+		public AudioClip equipSound;
 	}
 
 	public WeaponSlot[] weaponSlots;
