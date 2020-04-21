@@ -16,7 +16,15 @@ public class FpsInventory : MonoBehaviour
 	}
 
 	public WeaponSlot[] weaponSlots;
+	AudioSourceController aud;
 	int currentSlot;
+
+
+
+	void Start()
+	{
+		aud = GetComponent<AudioSourceController>();
+	}
 
 
 
@@ -36,6 +44,7 @@ public class FpsInventory : MonoBehaviour
 
 	void SwitchTo(int slotNumber)
 	{
+		currentSlot = slotNumber;
 		var slotToSwitchTo = weaponSlots.Where(s => s.slot == slotNumber).First();
 		
 		if(!slotToSwitchTo.obtained)
@@ -46,6 +55,7 @@ public class FpsInventory : MonoBehaviour
 
 		// enable weapon
 		slotToSwitchTo.weapon.gameObject.SetActive(true);
+		aud.PlayOneShot(slotToSwitchTo.equipSound);
 
 		// disable other weapons
 		foreach(var weaponSlot in weaponSlots)
