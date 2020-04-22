@@ -9,7 +9,7 @@ public class UiAmmoCounter : MonoBehaviour
 
 	FpsInventory inventory;
 	Text uiText;
-	int ammo = -1;
+
 
 
 	void Start()
@@ -22,15 +22,11 @@ public class UiAmmoCounter : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		var currentWeaponSlot = inventory.weaponSlots.Where(s => s.weapon.gameObject.activeInHierarchy).FirstOrDefault();
+		var currentWeaponSlot = inventory.weaponSlots.Where(s => s.weaponInterface.IsEquipped()).FirstOrDefault();
 		
 		if(currentWeaponSlot != null)
 		{
-			if(currentWeaponSlot.weapon.ammo != ammo)
-			{
-				ammo = currentWeaponSlot.weapon.ammo;
-				uiText.text = ammo.ToString();
-			}
+			uiText.text = currentWeaponSlot.weaponInterface.AmmoDisplay();
 		}
 		else
 		{

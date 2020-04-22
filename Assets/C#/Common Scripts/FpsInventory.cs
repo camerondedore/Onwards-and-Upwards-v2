@@ -9,7 +9,8 @@ public class FpsInventory : MonoBehaviour
 	[System.Serializable]
 	public class WeaponSlot
 	{
-		public Weapon weapon;
+		public GameObject weapon;
+		public IWeapon weaponInterface;
 		public int slot;
 		public bool obtained;
 		public AudioClip equipSound;
@@ -19,6 +20,16 @@ public class FpsInventory : MonoBehaviour
 	[SerializeField]
 	int currentSlot;
 	AudioSourceController aud;
+
+
+
+	void Awake()
+	{
+		foreach(var slot in weaponSlots)
+		{
+			slot.weaponInterface = slot.weapon.GetComponent<IWeapon>();
+		}
+	}
 
 
 
@@ -65,7 +76,7 @@ public class FpsInventory : MonoBehaviour
 		}
 
 		// enable weapon
-		slotToSwitchTo.weapon.gameObject.SetActive(true);
+		slotToSwitchTo.weaponInterface.Equip(true);
 		aud.PlayOneShot(slotToSwitchTo.equipSound);
 
 		// disable other weapons
@@ -73,7 +84,7 @@ public class FpsInventory : MonoBehaviour
 		{
 			if(weaponSlot.slot != slotNumber)
 			{
-				weaponSlot.weapon.gameObject.SetActive(false);
+				weaponSlot.weaponInterface.Equip(false);
 			}
 		}
 	}

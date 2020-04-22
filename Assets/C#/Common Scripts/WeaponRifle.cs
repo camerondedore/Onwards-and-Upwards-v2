@@ -2,21 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour, IWeapon
+public class WeaponRifle : MonoBehaviour, IWeapon
 {
-    [HideInInspector]
+	[HideInInspector]
 	public int ammo;
 	[SerializeField]
 	float cycleTime = 0.1f;
 	[SerializeField]
-	bool automatic = false;
-	[SerializeField]
 	int magazineCapacity = 30;
-	[SerializeField]
-	bool infiniteAmmo = false;
 	IWeaponAction[] actions;
-	public float recoilMagnitude = 1;
-	Disconnector sear = new Disconnector();
 	TimedDisconnector autoSear = new TimedDisconnector();
 
 
@@ -25,8 +19,6 @@ public class Weapon : MonoBehaviour, IWeapon
 	{
 		// set up auto sear
 		autoSear.releaseTime = cycleTime;
-		// load magazine
-		//ammo = magazineCapacity;
 		// get child actions
 		actions = GetComponentsInChildren<IWeaponAction>();
 	}
@@ -35,34 +27,22 @@ public class Weapon : MonoBehaviour, IWeapon
 
 	public bool PullTrigger(float trigger)
 	{
-		if(ammo == 0 && !infiniteAmmo)
+		if (ammo == 0)
 		{
 			return false;
 		}
 
 		// sear checks
 		var isCycleDone = autoSear.CanTrip();
-		var isTriggerUp = sear.Trip(trigger);
 
 		// cycle rate check
-		if(isCycleDone)
+		if (isCycleDone && trigger > 0)
 		{
-			if(automatic && trigger > 0)
-			{
-				// auto
-				TriggerActions();
-				autoSear.Trip();
-				ammo = Mathf.Clamp(ammo - 1, 0, magazineCapacity);
-				return true;
-			}
-			else if(isTriggerUp)
-			{
-				// semi
-				TriggerActions();
-				autoSear.Trip();
-				ammo = Mathf.Clamp(ammo - 1, 0, magazineCapacity);
-				return true;
-			}
+			// auto
+			TriggerActions();
+			autoSear.Trip();
+			ammo = Mathf.Clamp(ammo - 1, 0, magazineCapacity);
+			return true;
 		}
 
 		// cannot fire
@@ -94,7 +74,7 @@ public class Weapon : MonoBehaviour, IWeapon
 
 	void TriggerActions()
 	{
-		foreach(var a in actions)
+		foreach (var a in actions)
 		{
 			a.Fire();
 		}
@@ -107,7 +87,7 @@ public class Weapon : MonoBehaviour, IWeapon
 		return ammo.ToString();
 	}
 
-	
+
 
 	public bool IsEquipped()
 	{

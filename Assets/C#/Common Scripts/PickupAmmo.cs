@@ -28,11 +28,11 @@ public class PickupAmmo : MonoBehaviour, IPickup
 		var inventory = player.GetComponentInChildren<FpsInventory>();
 		var weaponSlot = inventory.weaponSlots.Where(s => s.slot == slot).First();
 
-		if (weaponSlot.weapon.CanReload())
+		if (weaponSlot.weaponInterface.CanReload())
 		{
 			AudioSource.PlayClipAtPoint(pickupSound, transform.position);
 			// give ammo
-			weaponSlot.weapon.Reload(ammo);
+			weaponSlot.weaponInterface.Reload(ammo);
 			// enter log
 			UiLog.Log(pickupLog);
 			Destroy(gameObject);

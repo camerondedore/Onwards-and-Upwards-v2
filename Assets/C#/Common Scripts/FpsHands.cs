@@ -5,14 +5,14 @@ using UnityEngine;
 public class FpsHands : MonoBehaviour
 {
     
-	Weapon[] weapons;
+	IWeapon[] weapons;
 	FpsRecoil recoilCtrl;
 
 
 
     void Start()
     {
-		weapons = GetComponentsInChildren<Weapon>(true);
+		weapons = GetComponentsInChildren<IWeapon>(true);
 		recoilCtrl = transform.root.GetComponentInChildren<FpsRecoil>();
     }
 
@@ -27,25 +27,10 @@ public class FpsHands : MonoBehaviour
 
 		foreach(var weapon in weapons)
 		{
-			if(weapon.gameObject.activeInHierarchy)
+			if(weapon.IsEquipped())
 			{
 				weapon.PullTrigger(PlayerInput.fire);
 			}
 		}
-		// pull trigger
-		// var willRecoil = weapon.PullTrigger(PlayerInput.fire);
-
-		// reload
-		// if (PlayerInput.reload > 0 && weapon.CanReload())
-		// {
-		// 	weapon.StartReload();
-		// 	weapon.Reload();
-		// }
-
-		// recoil
-		// if(willRecoil)
-		// {
-		// 	recoilCtrl.Recoil(weapon.recoilMagnitude);
-		// }
 	}
 }
