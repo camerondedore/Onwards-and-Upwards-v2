@@ -82,7 +82,7 @@ public class Weapon : MonoBehaviour
 
 	public bool CanReload()
 	{
-		return ammo < magazineCapacity && autoSear.CanTrip();
+		return ammo < magazineCapacity;
 	}
 
 

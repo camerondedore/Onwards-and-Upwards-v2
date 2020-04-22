@@ -9,6 +9,8 @@ public class PickupAmmo : MonoBehaviour, IPickup
 	[SerializeField]
 	AudioClip pickupSound;
 	[SerializeField]
+	string pickupLog;
+	[SerializeField]
 	int ammo = 30,
 		slot;
 
@@ -29,7 +31,10 @@ public class PickupAmmo : MonoBehaviour, IPickup
 		if (weaponSlot.weapon.CanReload())
 		{
 			AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+			// give ammo
 			weaponSlot.weapon.Reload(ammo);
+			// enter log
+			UiLog.Log(pickupLog);
 			Destroy(gameObject);
 		}
 	}
