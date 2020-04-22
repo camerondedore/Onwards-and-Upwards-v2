@@ -23,6 +23,8 @@ public class Weapon : MonoBehaviour
 	bool automatic = false;
 	[SerializeField]
 	int magazineCapacity = 30;
+	[SerializeField]
+	bool infiniteAmmo = false;
 	IWeaponAction[] actions;
 	public float recoilMagnitude = 1;
 	Disconnector sear = new Disconnector();
@@ -44,7 +46,7 @@ public class Weapon : MonoBehaviour
 
 	public bool PullTrigger(float trigger)
 	{
-		if(ammo == 0)
+		if(ammo == 0 && !infiniteAmmo)
 		{
 			return false;
 		}

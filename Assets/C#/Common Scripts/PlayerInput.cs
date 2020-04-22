@@ -12,7 +12,8 @@ public class PlayerInput : MonoBehaviour
 		//reload,
 		pause,
 		weapon1,
-		weapon2;
+		weapon2,
+		weapon3;
 
 
 
@@ -28,5 +29,6 @@ public class PlayerInput : MonoBehaviour
 		pause = Input.GetAxisRaw("Pause");
 		weapon1 = Input.GetAxisRaw("Weapon1");
 		weapon2 = Input.GetAxisRaw("Weapon2");
+		weapon3 = Input.GetAxisRaw("Weapon3");
     }
 }

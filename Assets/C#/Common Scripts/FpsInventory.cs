@@ -16,20 +16,27 @@ public class FpsInventory : MonoBehaviour
 	}
 
 	public WeaponSlot[] weaponSlots;
-	AudioSourceController aud;
+	[SerializeField]
 	int currentSlot;
+	AudioSourceController aud;
 
 
 
 	void Start()
 	{
 		aud = GetComponent<AudioSourceController>();
+		SwitchTo(currentSlot);
 	}
 
 
 
 	void Update()
 	{
+		if(Time.timeScale == 0)
+		{
+			return;
+		}
+
 		if(PlayerInput.weapon1 > 0 && currentSlot != 1)
 		{
 			SwitchTo(1);
@@ -37,6 +44,10 @@ public class FpsInventory : MonoBehaviour
 		else if (PlayerInput.weapon2 > 0 && currentSlot != 2)
 		{
 			SwitchTo(2);
+		}
+		else if (PlayerInput.weapon3 > 0 && currentSlot != 3)
+		{
+			SwitchTo(3);
 		}
 	}
 

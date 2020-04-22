@@ -713,7 +713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: 9c8da5ddbaee49b4eb55efeacc5617b3, type: 3}
   pickupLog: Obtained Saco Carbine Cells
   ammo: 40
-  slot: 2
+  slot: 3
 --- !u!135 &365225010
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1591,6 +1591,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d2c18ff08c0d042a9e87c7f2781e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &517227268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2000086813}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &517227269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2000086813}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &517227270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517227268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ff1d14b2deb3eb4e966ae47cfaaec65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammo: 0
+  cycleTime: 0.5
+  automatic: 1
+  magazineCapacity: 30
+  infiniteAmmo: 1
+  recoilMagnitude: 1
+--- !u!95 &517227271
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517227268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35b01343cf57a484f983cca92d6a4cd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &517227274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517227268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe52dbea5828fd46887ee3bc257c865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &629589945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,6 +1668,7 @@ MonoBehaviour:
   cycleTime: 0.2
   automatic: 1
   magazineCapacity: 400
+  infiniteAmmo: 0
   recoilMagnitude: 3
 --- !u!95 &629589948
 Animator:
@@ -1667,6 +1729,7 @@ MonoBehaviour:
   cycleTime: 0.5
   automatic: 1
   magazineCapacity: 300
+  infiniteAmmo: 0
   recoilMagnitude: 3
 --- !u!95 &730820504
 Animator:
@@ -2085,7 +2148,7 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: 9c8da5ddbaee49b4eb55efeacc5617b3, type: 3}
   pickupLog: Obtained Mannplex Pistol Charges
   ammo: 30
-  slot: 1
+  slot: 2
 --- !u!135 &887582680
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2212,7 +2275,7 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: 9c8da5ddbaee49b4eb55efeacc5617b3, type: 3}
   pickupLog: Obtained Saco Carbine Cells
   ammo: 40
-  slot: 2
+  slot: 3
 --- !u!135 &911779624
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2682,7 +2745,7 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: 9c8da5ddbaee49b4eb55efeacc5617b3, type: 3}
   pickupLog: Obtained Mannplex Pistol Charges
   ammo: 30
-  slot: 1
+  slot: 2
 --- !u!135 &1255765726
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3590,7 +3653,7 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: 9c8da5ddbaee49b4eb55efeacc5617b3, type: 3}
   pickupLog: Obtained Mannplex Pistol Charges
   ammo: 30
-  slot: 1
+  slot: 2
 --- !u!135 &1682990105
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3779,7 +3842,7 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: 9c8da5ddbaee49b4eb55efeacc5617b3, type: 3}
   pickupLog: Obtained Saco Carbine
   ammo: 30
-  slot: 2
+  slot: 3
 --- !u!23 &1699670588
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4510,6 +4573,162 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.143, y: 2.45233, z: 0.101238996}
   m_Center: {x: 0, y: 0.0052630305, z: 0.00000050105155}
+--- !u!1 &1915190411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915190412}
+  - component: {fileID: 1915190415}
+  - component: {fileID: 1915190414}
+  - component: {fileID: 1915190413}
+  m_Layer: 9
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915190412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915190411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.236, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 517227269}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1915190413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915190411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bfeb78c4c53bc4ea9edbbe4dfaddf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireClip: {fileID: 8300000, guid: e436710670a4fbf45bb647cd7ede7a6d, type: 3}
+  randomPitchRange: 0.1
+--- !u!82 &1915190414
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915190411}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 2
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1915190415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915190411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642f059a26f91d344b30e1b9d6cf8b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 0}
 --- !u!1001 &1976915585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4559,7 +4778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 20d42d1719c145241ab1c5b35d0e7c1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4596,6 +4815,180 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1976915585}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1998246987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998246988}
+  - component: {fileID: 1998246989}
+  m_Layer: 9
+  m_Name: Melee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1998246988
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998246987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.303, z: -0.234}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 517227269}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1998246989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998246987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0234e12d541c8b246b421b144ff0aa8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 4399370510068469039, guid: d9662527019884440a6bb13a35d7df1b, type: 3}
+  spreadCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  movementSpreadCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  recoverySpeed: 1
+  timeToRecover: 1
+  barrelEffectivenessMultiplier: 1
+--- !u!1001 &2000086813
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2004653705}
+    m_Modifications:
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.296
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.409
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14249751
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.054511037
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.33478546
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9298611
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 17.548
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.358
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -39.546
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 25e4c70728210934ab6a8100630255a2, type: 2}
+    - target: {fileID: -927199367670048503, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_Name
+      value: Shovel
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 52b9ca54cff7df84daf45aa8eba6c96d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 52b9ca54cff7df84daf45aa8eba6c96d, type: 3}
 --- !u!1 &2004653704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4628,6 +5021,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 517227269}
   - {fileID: 197948266}
   - {fileID: 1976915586}
   m_Father: {fileID: 88863722}
@@ -4676,13 +5070,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponSlots:
   - weapon: {fileID: 730820503}
-    slot: 1
-    obtained: 0
-    equipSound: {fileID: 8300000, guid: d107b3773fa47bf4998a394449ad9a8a, type: 3}
-  - weapon: {fileID: 629589945}
     slot: 2
     obtained: 0
     equipSound: {fileID: 8300000, guid: d107b3773fa47bf4998a394449ad9a8a, type: 3}
+  - weapon: {fileID: 629589945}
+    slot: 3
+    obtained: 0
+    equipSound: {fileID: 8300000, guid: d107b3773fa47bf4998a394449ad9a8a, type: 3}
+  - weapon: {fileID: 517227270}
+    slot: 1
+    obtained: 1
+    equipSound: {fileID: 8300000, guid: d107b3773fa47bf4998a394449ad9a8a, type: 3}
+  currentSlot: 1
 --- !u!82 &2004653709
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5137,7 +5536,7 @@ MonoBehaviour:
   pickupSound: {fileID: 8300000, guid: 9c8da5ddbaee49b4eb55efeacc5617b3, type: 3}
   pickupLog: Obtained Mannplex Pistol
   ammo: 30
-  slot: 1
+  slot: 2
 --- !u!135 &4879473695175861231
 SphereCollider:
   m_ObjectHideFlags: 0
