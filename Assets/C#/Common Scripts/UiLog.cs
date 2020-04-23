@@ -38,7 +38,7 @@ public class UiLog : MonoBehaviour
 	{
 		// update log
 		log = entry + "\n" + log;
-		log = log.Substring(0, Mathf.Clamp(296, 0, log.Length - 1));		
+		log = log.Substring(0, Mathf.Clamp(296, 0, log.Length));		
 		text.text = log;
 		lastLoggedTime = Time.time;
 	}
