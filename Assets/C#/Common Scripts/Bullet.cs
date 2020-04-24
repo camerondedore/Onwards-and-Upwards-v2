@@ -66,7 +66,7 @@ public class Bullet : Projectile, IAffectable
 			{
 				if (defaultHitFx != null)
 				{
-					Instantiate(defaultHitFx, hit.point, Quaternion.LookRotation(hit.normal, velocity));
+					Instantiate(defaultHitFx, hit.point, Quaternion.LookRotation(hit.normal, Random.onUnitSphere));
 				}
 				
 				// no penetration

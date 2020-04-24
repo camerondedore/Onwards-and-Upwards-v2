@@ -43,7 +43,7 @@ public class FpsInventory : MonoBehaviour
 
 	void Update()
 	{
-		if(Time.timeScale == 0)
+		if(Time.timeScale == 0 || (PlayerInput.weapon1 + PlayerInput.weapon2 + PlayerInput.weapon3 > 1))
 		{
 			return;
 		}
@@ -66,7 +66,6 @@ public class FpsInventory : MonoBehaviour
 
 	void SwitchTo(int slotNumber)
 	{
-		currentSlot = slotNumber;
 		var slotToSwitchTo = GetSlot(slotNumber);
 		
 		if(!slotToSwitchTo.obtained)
@@ -74,6 +73,8 @@ public class FpsInventory : MonoBehaviour
 			// weapon is not yet obtained, don't switch
 			return;
 		}
+
+		currentSlot = slotNumber;
 
 		// enable weapon
 		slotToSwitchTo.weaponInterface.Equip(true);
