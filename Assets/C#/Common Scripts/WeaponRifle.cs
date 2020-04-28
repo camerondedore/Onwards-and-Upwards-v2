@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponRifle : MonoBehaviour, IWeapon
 {
-	[HideInInspector]
+	
 	public int ammo;
 	[SerializeField]
 	float cycleTime = 0.1f;

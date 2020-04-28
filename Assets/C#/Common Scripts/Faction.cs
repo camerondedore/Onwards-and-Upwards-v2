@@ -5,7 +5,7 @@ using UnityEngine;
 public class Faction : MonoBehaviour
 {
     
-	public enum factions {Player, Police};
+	public enum factions {Player, Smuggler};
 	public static List<Faction> actors = new List<Faction>();
 	public factions faction;
 

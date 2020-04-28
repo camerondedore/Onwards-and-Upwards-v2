@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class UiHealthCounter : MonoBehaviour
 {
 
-	HealthPlayer health;
+	PlayerHealth health;
 	Text uiText;
 
 
 
 	void Start()
 	{
-		health = transform.root.GetComponentInChildren<HealthPlayer>();
+		health = transform.root.GetComponentInChildren<PlayerHealth>();
 		uiText = GetComponent<Text>();
 	}
 

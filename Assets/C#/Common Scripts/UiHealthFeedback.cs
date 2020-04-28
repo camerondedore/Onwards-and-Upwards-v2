@@ -6,14 +6,14 @@ public class UiHealthFeedback : MonoBehaviour
 {
 
 	Animator anim;
-	HealthPlayer health;
+	PlayerHealth health;
 	float lastHealth = -1;
 
 
 
 	void Start()
 	{
-		health = transform.root.GetComponentInChildren<HealthPlayer>();
+		health = transform.root.GetComponentInChildren<PlayerHealth>();
 		anim = GetComponent<Animator>();
 		lastHealth = health.hitPoints;
 	}

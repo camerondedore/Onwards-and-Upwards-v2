@@ -50,7 +50,7 @@ MonoBehaviour:
   savedChildren: []
   mask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8193
   gravityInfluence: 0
   damage: 25
   penetration: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPlayer : Health
+public class PlayerHealth : Health
 {
 
 

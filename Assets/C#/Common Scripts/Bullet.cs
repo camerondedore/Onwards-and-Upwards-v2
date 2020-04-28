@@ -85,7 +85,11 @@ public class Bullet : Projectile, IAffectable
 	{
 		yield return new WaitForFixedUpdate();
 		var force = direction.normalized * damage * 0.25f;
-		rb.AddForceAtPosition(force, point, ForceMode.Impulse);
+		
+		if(rb != null)
+		{
+			rb.AddForceAtPosition(force, point, ForceMode.Impulse);
+		}
 	}
 
 

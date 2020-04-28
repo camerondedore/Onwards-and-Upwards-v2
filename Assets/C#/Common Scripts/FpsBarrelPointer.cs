@@ -15,7 +15,7 @@ public class FpsBarrelPointer : MonoBehaviour
 
     void Start()
     {
-        barrels = GetComponentsInChildren<Barrel>(true);
+        barrels = transform.root.GetComponentsInChildren<Barrel>(true);
     }
 
     

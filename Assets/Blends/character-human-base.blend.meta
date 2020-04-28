@@ -1,67 +1,188 @@
 fileFormatVersion: 2
 guid: 0b0851ba2abcfd047a76cd9013f0deed
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Arm_Human_Base
-    100004: Arm_L
-    100006: Arm_R
-    100008: Base
-    100010: Char_Human_Base
-    100012: Chest
-    100014: Foot_L
-    100016: Foot_R
-    100018: Forearm_L
-    100020: Forearm_R
-    100022: Hand_L
-    100024: Hand_R
-    100026: Head
-    100028: Hips
-    100030: Leg_L
-    100032: Leg_R
-    100034: Thigh_L
-    100036: Thigh_R
-    100038: Weapon_Standin
-    100040: Weapon
-    400000: //RootNode
-    400002: Arm_Human_Base
-    400004: Arm_L
-    400006: Arm_R
-    400008: Base
-    400010: Char_Human_Base
-    400012: Chest
-    400014: Foot_L
-    400016: Foot_R
-    400018: Forearm_L
-    400020: Forearm_R
-    400022: Hand_L
-    400024: Hand_R
-    400026: Head
-    400028: Hips
-    400030: Leg_L
-    400032: Leg_R
-    400034: Thigh_L
-    400036: Thigh_R
-    400038: Weapon_Standin
-    400040: Weapon
-    2100000: unnamed
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Char_Human_Base
-    4300002: Weapon_Standin
-    7400000: Default Take
-    7400002: Human_Fire
-    7400004: Human_Hurt
-    7400006: Human_Idle
-    7400008: Human_Walk
-    9500000: //RootNode
-    13700000: Char_Human_Base
-    13700002: Weapon_Standin
-    2186277476908879412: ImportLogs
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Arm_Human_Base
+  - first:
+      1: 100004
+    second: Arm_L
+  - first:
+      1: 100006
+    second: Arm_R
+  - first:
+      1: 100008
+    second: Base
+  - first:
+      1: 100010
+    second: Char_Human_Base
+  - first:
+      1: 100012
+    second: Chest
+  - first:
+      1: 100014
+    second: Foot_L
+  - first:
+      1: 100016
+    second: Foot_R
+  - first:
+      1: 100018
+    second: Forearm_L
+  - first:
+      1: 100020
+    second: Forearm_R
+  - first:
+      1: 100022
+    second: Hand_L
+  - first:
+      1: 100024
+    second: Hand_R
+  - first:
+      1: 100026
+    second: Head
+  - first:
+      1: 100028
+    second: Hips
+  - first:
+      1: 100030
+    second: Leg_L
+  - first:
+      1: 100032
+    second: Leg_R
+  - first:
+      1: 100034
+    second: Thigh_L
+  - first:
+      1: 100036
+    second: Thigh_R
+  - first:
+      1: 100038
+    second: Weapon_Standin
+  - first:
+      1: 100040
+    second: Weapon
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Arm_Human_Base
+  - first:
+      4: 400004
+    second: Arm_L
+  - first:
+      4: 400006
+    second: Arm_R
+  - first:
+      4: 400008
+    second: Base
+  - first:
+      4: 400010
+    second: Char_Human_Base
+  - first:
+      4: 400012
+    second: Chest
+  - first:
+      4: 400014
+    second: Foot_L
+  - first:
+      4: 400016
+    second: Foot_R
+  - first:
+      4: 400018
+    second: Forearm_L
+  - first:
+      4: 400020
+    second: Forearm_R
+  - first:
+      4: 400022
+    second: Hand_L
+  - first:
+      4: 400024
+    second: Hand_R
+  - first:
+      4: 400026
+    second: Head
+  - first:
+      4: 400028
+    second: Hips
+  - first:
+      4: 400030
+    second: Leg_L
+  - first:
+      4: 400032
+    second: Leg_R
+  - first:
+      4: 400034
+    second: Thigh_L
+  - first:
+      4: 400036
+    second: Thigh_R
+  - first:
+      4: 400038
+    second: Weapon_Standin
+  - first:
+      4: 400040
+    second: Weapon
+  - first:
+      21: 2100000
+    second: unnamed
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      43: 4300000
+    second: Char_Human_Base
+  - first:
+      43: 4300002
+    second: Weapon_Standin
+  - first:
+      74: 7400000
+    second: Default Take
+  - first:
+      74: 7400002
+    second: Human_Fire
+  - first:
+      74: 7400004
+    second: Human_Hurt
+  - first:
+      74: 7400006
+    second: Human_Idle
+  - first:
+      74: 7400008
+    second: Human_Walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Char_Human_Base
+  - first:
+      137: 13700002
+    second: Weapon_Standin
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  - first:
+      74: 6767231499955058407
+    second: human_die_rifle
+  - first:
+      74: -4945603434877664869
+    second: human_idle_rifle
+  - first:
+      74: 4712878135192270588
+    second: human_attack_rifle
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -88,38 +209,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Human_Fire
-      takeName: Human_Fire
+      name: human_die_rifle
+      takeName: human_die_rifle
+      internalID: 0
       firstFrame: -1
       lastFrame: 9
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Human_Hurt
-      takeName: Human_Hurt
-      firstFrame: -1
-      lastFrame: 14
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -144,8 +238,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Human_Idle
-      takeName: Human_Idle
+      name: human_idle_rifle
+      takeName: human_idle_rifle
+      internalID: 0
       firstFrame: -1
       lastFrame: 59
       wrapMode: 0
@@ -172,8 +267,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Human_Walk
-      takeName: Human_Walk
+      name: human_attack_rifle
+      takeName: human_attack_rifle
+      internalID: 0
       firstFrame: -1
       lastFrame: 19
       wrapMode: 0
@@ -206,6 +302,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 0
@@ -213,18 +310,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -233,10 +331,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -246,13 +344,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: Base
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
