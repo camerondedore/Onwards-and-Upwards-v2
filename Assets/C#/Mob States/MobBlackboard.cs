@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class MobBlackboard : MonoBehaviour
 {
@@ -9,9 +8,9 @@ public class MobBlackboard : MonoBehaviour
 	public State idleState;
 	public State attackSuperState;
 	public State seekState;
-	public State shootState;
+	public State engageState;
 	public State dieState;
-	public NavMeshAgent agent;
+	public NavMeshCharacterController controller;
 	public Animator animator;
 	public Faction myFaction;
 	public IWeapon weapon;

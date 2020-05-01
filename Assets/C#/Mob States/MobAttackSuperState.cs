@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobSuperStateAttack : MobSuperState
+public class MobAttackSuperState : MobSuperState
 {
-
+    
 
 
 
 
 	public override State Transition()
 	{
-		if (blackboard.target == null)
+		// have target?
+		if(blackboard.target == null)
 		{
-			// attack
+			// idle
 			return blackboard.idleState;
 		}
-
 
 		return this;
 	}

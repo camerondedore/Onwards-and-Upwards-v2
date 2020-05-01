@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobStateDie : MobState
+public class MobDieState : MobState
 {
 
 	[SerializeField]
@@ -19,9 +19,12 @@ public class MobStateDie : MobState
 
 	public override void StartState()
 	{
-		blackboard.agent.isStopped = true;
-		blackboard.agent.radius = 0.01f;
+		blackboard.controller.agent.isStopped = true;
+		blackboard.controller.agent.radius = 0.01f;
+		blackboard.controller.enabled = false;
 		blackboard.animator.SetTrigger("die");
+		blackboard.animator.ResetTrigger("attack");
+		blackboard.animator.ResetTrigger("idle");
 		
 		foreach(var g in destroyables)
 		{

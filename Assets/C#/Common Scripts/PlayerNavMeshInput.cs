@@ -19,7 +19,7 @@ public class PlayerNavMeshInput : MonoBehaviour
     void Update()
     {
 		var moveDir = new Vector3(PlayerInput.move.x, 0, PlayerInput.move.y);
-        controller.Move(moveDir);
+        controller.Move(moveDir, true);
         controller.Look(PlayerInput.look);
     }
 }

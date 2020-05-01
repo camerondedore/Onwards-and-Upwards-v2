@@ -8,6 +8,8 @@ public class NavMeshCharacterController : MonoBehaviour, IInitializeIntoBlackboa
 {
 
 	public static float lookSensitivity = 200;
+	[HideInInspector]
+	public NavMeshAgent agent;
 	[SerializeField] 
 	Transform head = null;
 	[SerializeField] 
@@ -15,7 +17,6 @@ public class NavMeshCharacterController : MonoBehaviour, IInitializeIntoBlackboa
 	[SerializeField]
 	float lookLimit = 30,
 		inertiaInverseMultiplier = 15;
-	NavMeshAgent agent;
 	Vector3 moveVector,
 		targetMoveVector;
 	Vector2 lookAngles,
@@ -30,7 +31,7 @@ public class NavMeshCharacterController : MonoBehaviour, IInitializeIntoBlackboa
 
 
 
-	void Start()
+	void Awake()
 	{
 		agent = GetComponent<NavMeshAgent>();
 		lookAngles = new Vector2(0, transform.localEulerAngles.y);
@@ -62,7 +63,7 @@ public class NavMeshCharacterController : MonoBehaviour, IInitializeIntoBlackboa
 		}
 		
 		moveVector = Vector3.Lerp(moveVector, targetMoveVector, Time.fixedDeltaTime * inertiaInverseMultiplier);
-		var direction = transform.TransformDirection(moveVector);
+		var direction = moveVector;
 		
 		agent.Move(direction * agent.speed * Time.fixedDeltaTime);
 		Physics.SyncTransforms();
@@ -73,9 +74,16 @@ public class NavMeshCharacterController : MonoBehaviour, IInitializeIntoBlackboa
 	/// <summary>
 	/// move agent on navmesh using agent speed
 	/// </summary>
-	public void Move(Vector3 direction)
+	public void Move(Vector3 direction, bool localSpace)
 	{
-		targetMoveVector = direction;
+		if(localSpace)
+		{
+			targetMoveVector = transform.TransformDirection(direction);
+		}
+		else
+		{
+			targetMoveVector = direction;
+		}
 	}
 
 
