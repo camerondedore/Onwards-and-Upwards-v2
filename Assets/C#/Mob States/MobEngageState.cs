@@ -7,34 +7,46 @@ public class MobEngageState : MobState
 
 	[SerializeField]
 	float burstTime = 1,
-		gapTime = 1;
+		gapTime = 1,
+		moveTime = 4;
 	Vector3 moveDir;
-	float startTime;
+	float shootStartTime,
+		moveStartTime;
 	bool isShooting = false;
 
 
 
 	public override void RunState()
 	{
-		// look in direction of mevement
+		// look at target
 		var lookDir = blackboard.target.transform.position - transform.root.position;
 		lookDir.y = 0;
 		blackboard.controller.LookAt(lookDir);
 
+		// change movement?
+		if(Time.time > moveStartTime + moveTime)
+		{
+			moveStartTime = Time.time;
+			// get move direction
+			moveDir = Random.onUnitSphere;
+			moveDir.y = 0;
+			blackboard.controller.Move(moveDir, false);
+		}
+
 		// burst over?
-		if(isShooting && Time.time > startTime + burstTime)
+		if(isShooting && Time.time > shootStartTime + burstTime)
 		{
 			// stop shooting
 			isShooting = false;
-			startTime = Time.time;
+			shootStartTime = Time.time;
 		}
 
 		// gap over?
-		if (!isShooting && Time.time > startTime + gapTime)
+		if (!isShooting && Time.time > shootStartTime + gapTime)
 		{
 			// start shooting
 			isShooting = true;
-			startTime = Time.time;
+			shootStartTime = Time.time;
 		}
 
 		// aim
@@ -53,7 +65,8 @@ public class MobEngageState : MobState
 	public override void StartState()
 	{
 		blackboard.controller.agent.isStopped = true;
-		startTime = -Mathf.Infinity;
+		shootStartTime = -Mathf.Infinity;
+		moveStartTime = -Mathf.Infinity;
 		// get move direction
 		moveDir = Random.onUnitSphere;
 		moveDir.y = 0;

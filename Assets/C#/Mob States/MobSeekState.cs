@@ -12,7 +12,7 @@ public class MobSeekState : MobState
 
 	public override void RunState()
 	{
-		// look in direction of mevement
+		// look in direction of movement
 		var lookDir = blackboard.controller.agent.velocity;
 		lookDir.y = 0;
 		
