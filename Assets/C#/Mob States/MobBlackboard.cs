@@ -18,6 +18,7 @@ public class MobBlackboard : MonoBehaviour
 	public Transform eyes;
 	public LayerMask eyeMask;
 	public Faction target;
+	public MobDrop dropper;
 
 
 

@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 3428054095450593633}
   - component: {fileID: -4221186559797650460}
   m_Layer: 0
-  m_Name: Pistol Bullet
+  m_Name: Bullet Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8193
   gravityInfluence: 0
-  damage: 35
+  damage: 30
   penetration: 0
   inheritVelocity: 0
 --- !u!114 &-4221186559797650460

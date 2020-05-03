@@ -25,6 +25,7 @@ public class MobDieState : MobState
 		blackboard.animator.SetTrigger("die");
 		blackboard.animator.ResetTrigger("attack");
 		blackboard.animator.ResetTrigger("idle");
+		blackboard.dropper.Drop();
 		
 		foreach(var g in destroyables)
 		{
