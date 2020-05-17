@@ -81,4 +81,14 @@ public class MobTools
 		var direction = target - start;
 		return Vector3.Angle(direction, forward) <= maxAngle;
 	}
+
+
+
+	/// <summary>
+	/// Check if target is within range
+	/// </summary>
+	public static bool CheckDistance(Vector3 start, Vector3 target, float distance)
+	{
+		return Vector3.Distance(start, target) <= distance;
+	}
 }

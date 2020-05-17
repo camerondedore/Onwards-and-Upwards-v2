@@ -35,7 +35,7 @@ public class MobIdleState : MobState
 	{
 		if(blackboard.target != null)
 		{
-			return blackboard.attackSuperState;
+			return blackboard.seekState;
 		}
 
 		return this;

@@ -59,6 +59,13 @@ public class MobSeekState : MobState
 			return blackboard.engageState;
 		}
 
+		// out of range?
+		if(!MobTools.CheckDistance(blackboard.eyes.position, blackboard.target.transform.position, blackboard.seekRange))
+		{
+			// idle
+			return blackboard.idleState;
+		}
+
 		return this;
 	}
 }

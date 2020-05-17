@@ -6,7 +6,6 @@ public class MobBlackboard : MonoBehaviour
 {
 
 	public State idleState;
-	public State attackSuperState;
 	public State seekState;
 	public State engageState;
 	public State dieState;
@@ -19,6 +18,7 @@ public class MobBlackboard : MonoBehaviour
 	public LayerMask eyeMask;
 	public Faction target;
 	public MobDrop dropper;
+	public float seekRange;
 
 
 
