@@ -42,18 +42,21 @@ public class NavMeshCharacterController : MonoBehaviour, IInitializeIntoBlackboa
 	void FixedUpdate()
 	{
 		// apply look
-		var change = lookVector * lookSensitivity * Time.fixedDeltaTime;
-		lookAngles += change;
-		lookAngles.x = Mathf.Clamp(lookAngles.x, -lookLimit, lookLimit);
+		if(lookVector.sqrMagnitude > 0)
+		{
+			var change = lookVector * lookSensitivity * Time.fixedDeltaTime;
+			lookAngles += change;
+			lookAngles.x = Mathf.Clamp(lookAngles.x, -lookLimit, lookLimit);
 
-		var headLocalEuler = head.localEulerAngles;
-		headLocalEuler.x = lookAngles.x;
+			var headLocalEuler = head.localEulerAngles;
+			headLocalEuler.x = lookAngles.x;
 
-		var bodyLocalEuler = transform.localEulerAngles;
-		bodyLocalEuler.y = lookAngles.y;
+			var bodyLocalEuler = transform.localEulerAngles;
+			bodyLocalEuler.y = lookAngles.y;
 
-		head.localRotation = Quaternion.Euler(headLocalEuler);
-		transform.localRotation = Quaternion.Euler(bodyLocalEuler);
+			head.localRotation = Quaternion.Euler(headLocalEuler);
+			transform.localRotation = Quaternion.Euler(bodyLocalEuler);
+		}
 
 
 		// apply move

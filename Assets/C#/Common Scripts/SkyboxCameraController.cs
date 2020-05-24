@@ -10,7 +10,6 @@ public class SkyboxCameraController : MonoBehaviour
 	[SerializeField]
 	bool useFog = false;
 	Transform mainCamera;
-	Vector3 startPosition;
 	float fogStart,
 		fogEnd;
 
@@ -19,7 +18,6 @@ public class SkyboxCameraController : MonoBehaviour
     void Awake()
     {
         mainCamera = Camera.main.transform;
-		startPosition = transform.position;
 		fogStart = RenderSettings.fogStartDistance;
 		fogEnd = RenderSettings.fogEndDistance;
     }
@@ -29,7 +27,7 @@ public class SkyboxCameraController : MonoBehaviour
     void LateUpdate()
     {
 		// position
-        transform.position = startPosition + mainCamera.position / scale;
+        transform.localPosition = mainCamera.position / scale;
 
 		// rotation
 		transform.rotation = mainCamera.rotation;

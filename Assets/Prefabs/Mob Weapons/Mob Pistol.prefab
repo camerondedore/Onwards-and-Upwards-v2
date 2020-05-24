@@ -22,6 +22,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6428172649988021608, guid: 5b5e184acf6809f45977af6080e5198c,
+        type: 3}
+      propertyPath: fireClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b51af2b2835e63f46a5d0d7ac549c1db, type: 3}
     - target: {fileID: 6428172650691998072, guid: 5b5e184acf6809f45977af6080e5198c,
         type: 3}
       propertyPath: spreadCurve.m_Curve.Array.size
